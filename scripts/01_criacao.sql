@@ -4,6 +4,7 @@
 --                Pedro Eric Carneiro (538121)
 -- Script 01: criação do banco. MySQL 5.7+
 
+SET NAMES utf8mb4;
 DROP DATABASE IF EXISTS equipe535946;
 CREATE DATABASE equipe535946
   DEFAULT CHARACTER SET utf8mb4
@@ -879,6 +880,7 @@ GRANT EXECUTE ON PROCEDURE equipe535946.sp_consultar_emprestimos_usuario TO 'bib
 
 -- Usuário: só consulta o acervo (visões), reserva on-line e se cadastra/cancela
 GRANT SELECT ON equipe535946.vw_catalogo_livros TO 'usuario'@'%';
+GRANT SELECT ON equipe535946.curso TO 'usuario'@'%';
 GRANT EXECUTE ON PROCEDURE equipe535946.sp_reservar_livro TO 'usuario'@'%';
 GRANT EXECUTE ON PROCEDURE equipe535946.sp_identificar_usuario TO 'usuario'@'%';
 GRANT EXECUTE ON PROCEDURE equipe535946.sp_consultar_emprestimos_usuario TO 'usuario'@'%';

@@ -3,6 +3,7 @@
 --                Iarley Cavalcante Tavares Balreira (535946),
 --                Pedro Eric Carneiro (538121)
 -- Script 02: povoamento (executar após o 01_criacao.sql)
+SET NAMES utf8mb4;
 USE equipe535946;
 
 -- Cursos
